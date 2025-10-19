@@ -71,18 +71,16 @@ public class Main {
 
 
         System.out.println(" Задание №3 ");
-        int year = 2021;
-        if (year % 4 == 0 || year % 400 == 0) {
+        int year = 1588;
+        if (year < 1584) {
+            System.out.println(" Данный год входит в период, когда високосный год не был введен ");
+        }
+        if (year % 4== 0 && year % 100 != 0 || year % 400 == 0) {
             System.out.println(" Год: " + year + " является високосным ");
-        } else if (year % 100 == 0){
+        } else {
             System.out.println(" Год: " + year + " не является високосным ");
 
         }
-        if (year < 1584){
-            System.out.println(" Данный год входит в период, когда високосный год не был введен ");
-        }
-        if (year % 2 != 0){
-            System.out.println(" Год является нечетным. ");
-        }
+
     }
 }
